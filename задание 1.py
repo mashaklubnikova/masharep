@@ -1,4 +1,3 @@
-# TODO: Подробно описать три произвольных класса
 class Book:
     """
     Класс, описывающий книгу.
@@ -172,9 +171,4 @@ class SocialNetworkPost:
         if show_likes:
             post_info += f"\nЛайки: {self.likes}"
         return post_info
-
-# TODO: описать класс
-
-# TODO: описать ещё класс
-
-# TODO: и ещё один
+        
