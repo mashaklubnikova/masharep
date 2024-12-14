@@ -38,6 +38,4 @@ if __name__ == "__main__":
     # Создаем счет с отрицательным балансом
     bad_account = BankAccount("Нехороший клиент", -500.0)
  except ValueError as e:
-
-
-
+     print(f"Ошибка при создании счета: {e}")
