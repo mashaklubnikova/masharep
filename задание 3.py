@@ -1,12 +1,14 @@
 class Book:
 
-    def __init__(self, name: str, author: str) -> None:
+    def __init__(self, name: str, author: str) :
         self._name = name
         self._author = author
 
+    @property
     def name(self) -> str:
         return self._name
 
+    @property  
     def author(self) -> str:
         return self._author
 
@@ -18,13 +20,15 @@ class Book:
 
 
 class PaperBook(Book):
-    def __init__(self, name: str, author: str, pages: int) -> None:
+    def __init__(self, name: str, author: str, pages: int) :
         super().__init__(name, author)
         self.pages = pages
 
+    @property
     def pages(self) -> int:
         return self._pages
 
+    @pages.setter
     def pages(self, value: int) -> None:
         if not isinstance(value, int):
             raise TypeError("Количество страниц должно быть целым числом")
@@ -44,9 +48,11 @@ class AudioBook(Book):
         super().__init__(name, author)
         self.duration = duration
 
+    @property
     def duration(self) -> float:
         return self._duration
 
+    @duration.setter
     def duration(self, value: float) -> None:
         if not isinstance(value, (int, float)):
             raise TypeError("Продолжительность должна быть числом")
