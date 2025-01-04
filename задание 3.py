@@ -67,43 +67,43 @@ class AudioBook(Book):
         return f"AudioBook(name={self._name!r}, author={self._author!r}, duration={self._duration!r})"
 
 if __name__ == "__main__":
-        book = Book("The Hitchhiker's Guide to the Galaxy", "Douglas Adams")
-        paper_book = PaperBook("Pride and Prejudice", "Jane Austen", 432)
-        audio_book = AudioBook("1984", "George Orwell", 11.5)
+    book = Book("The Hitchhiker's Guide to the Galaxy", "Douglas Adams")
+    paper_book = PaperBook("Pride and Prejudice", "Jane Austen", 432)
+    audio_book = AudioBook("1984", "George Orwell", 11.5)
 
-        print(book)
-        print(paper_book)
-        print(audio_book)
+    print(book)
+    print(paper_book)
+    print(audio_book)
 
-        print(repr(book))
-        print(repr(paper_book))
-        print(repr(audio_book))
+    print(repr(book))
+    print(repr(paper_book))
+    print(repr(audio_book))
 
-        try:
-            paper_book.pages = -100
-        except ValueError as e:
-            print(e)
+    try:
+        paper_book.pages = -100
+    except ValueError as e:
+        print(e)
 
-        try:
-            paper_book.pages = "abc"
-        except TypeError as e:
-            print(e)
+    try:
+        paper_book.pages = "abc"
+    except TypeError as e:
+        print(e)
 
-        try:
-            audio_book.duration = -1
-        except ValueError as e:
-            print(e)
+    try:
+        audio_book.duration = -1
+    except ValueError as e:
+        print(e)
 
-        try:
-            audio_book.duration = "abc"
-        except TypeError as e:
-            print(e)
+    try:
+        audio_book.duration = "abc"
+    except TypeError as e:
+        print(e)
 
-        print(f"Name of book: {book.name}")
-        print(f"Page number of paper book: {paper_book.pages}")
-        print(f"Duration of audio book: {audio_book.duration}")
+    print(f"Name of book: {book.name}")
+    print(f"Page number of paper book: {paper_book.pages}")
+    print(f"Duration of audio book: {audio_book.duration}")
 
-        try:
-            book.name = "new name"
-        except AttributeError as e:
-            print(e)
+    try:
+        book.name = "new name"
+    except AttributeError as e:
+        print(e)
