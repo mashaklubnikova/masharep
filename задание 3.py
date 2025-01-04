@@ -99,11 +99,11 @@ class AudioBook(Book):
         except TypeError as e:
             print(e)
 
+        print(f"Name of book: {book.name}")
+        print(f"Page number of paper book: {paper_book.pages}")
+        print(f"Duration of audio book: {audio_book.duration}")
+
         try:
             book.name = "new name"
         except AttributeError as e:
             print(e)
-
-        print(f"Name of book: {book.name}")
-        print(f"Page number of paper book: {paper_book.pages}")
-        print(f"Duration of audio book: {audio_book.duration}")
