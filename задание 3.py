@@ -66,7 +66,7 @@ class AudioBook(Book):
     def __repr__(self) -> str:
         return f"AudioBook(name={self._name!r}, author={self._author!r}, duration={self._duration!r})"
 
-    if __name__ == "__main__":
+if __name__ == "__main__":
         book = Book("The Hitchhiker's Guide to the Galaxy", "Douglas Adams")
         paper_book = PaperBook("Pride and Prejudice", "Jane Austen", 432)
         audio_book = AudioBook("1984", "George Orwell", 11.5)
