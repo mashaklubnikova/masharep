@@ -1,7 +1,5 @@
 from abc import ABC, abstractmethod
 from datetime import datetime
-from typing import List, Union
-
 
 class Publication(ABC):
     def __init__(self, title: str, author: str, publication_date: datetime):
